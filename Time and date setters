@@ -1,0 +1,37 @@
+import java.sql.Time;
+
+import java.time.LocalDate;
+
+import java.time.LocalDateTime;
+
+import java.time.LocalTime;
+
+import java.time.format.DateTimeFormatter;
+
+import java.util.*;
+
+class Code{
+
+    public static void main(String... args){
+
+       LocalDateTime dt=LocalDateTime.now();
+
+       System.out.println("Unformatted date: "+ dt);
+
+        DateTimeFormatter df=DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        String dtf= dt.format(df);
+
+        System.out.println("The formatted date: "+ dtf);
+
+    }
+
+}
+
+/*
+
+Unformatted date: 2023-04-13T21:17:37.804911400
+
+The formatted date: 13-04-2023
+
+ */
