@@ -118,3 +118,65 @@ Enter the value of n:
 The output is : 5
 
  */
+
+
+
+// Using finally block in the exception handling problem.
+
+class Code{
+
+ public static int divide(int a, int b) throws ArithmeticException{
+
+  int res=a/b;
+
+  return res;
+
+ }
+
+ public static int add(int c, int d){
+
+  int f=c+d;
+
+  return f;
+
+ }
+
+ public static void main(String... java){
+
+  int f=add(2,3);
+
+  System.out.println("The sum of c and d is: "+ f);
+
+  try {
+
+   int c = divide(4, 0);
+
+   System.out.println(c);
+
+  }
+
+  catch (Exception e){
+
+   System.out.println("Checked Exception... please try again");
+
+  }
+
+  finally {
+
+   System.out.println("Code execution is finished");
+
+  }
+
+ }
+
+}
+
+/*
+
+The sum of c and d is: 5
+
+Checked Exception... please try again
+
+Code execution is finished
+
+ */
